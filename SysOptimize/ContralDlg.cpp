@@ -14,7 +14,7 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CContralDlg dialog
 ///// CCCCCDLG ;
-
+//// ccccccc
 CContralDlg::CContralDlg(CWnd *pParent /*=NULL*/)
     : CDialog(CContralDlg::IDD, pParent)
 {
@@ -67,104 +67,104 @@ END_MESSAGE_MAP()
 BOOL CContralDlg::OnInitDialog()
 {
     CDialog::OnInitDialog();
-    m_Internet.SetImageIndex(0);            // InternetÑ¡Ïî°´Å¥ÏÔÊ¾Í¼±ê
-    m_Mmsys.SetImageIndex(1);               // ÉùÒô°´Å¥ÏÔÊ¾Í¼±ê
-    m_Timedate.SetImageIndex(2);            // Ê±¼äºÍÈÕÆÚ°´Å¥ÏÔÊ¾Í¼±ê
-    m_Desk.SetImageIndex(3);                // ÏÔÊ¾°´Å¥ÏÔÊ¾Í¼±ê
-    m_Access.SetImageIndex(4);              // ¸¨ÖúÑ¡Ïî°´Å¥ÏÔÊ¾Í¼±ê
-    m_Mouse.SetImageIndex(5);               // Êó±ê°´Å¥ÏÔÊ¾Í¼±ê
-    m_Keyboard.SetImageIndex(6);            // ¼üÅÌ°´Å¥ÏÔÊ¾Í¼±ê
-    m_Intl.SetImageIndex(7);                // ÇøÓò°´Å¥ÏÔÊ¾Í¼±ê
-    m_Appwiz.SetImageIndex(8);              // Ìí¼Ó/É¾³ý³ÌÐò°´Å¥ÏÔÊ¾Í¼±ê
-    m_Hdwwiz.SetImageIndex(9);              // Ìí¼ÓÓ²¼þ°´Å¥ÏÔÊ¾Í¼±ê
-    m_Sysdm.SetImageIndex(10);              // ÏµÍ³°´Å¥ÏÔÊ¾Í¼±ê
-    m_Computer.SetImageIndex(11);           // ¼ÆËã»ú¹ÜÀí°´Å¥ÏÔÊ¾Í¼±ê
+    m_Internet.SetImageIndex(0);            // Interneté€‰é¡¹æŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Mmsys.SetImageIndex(1);               // å£°éŸ³æŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Timedate.SetImageIndex(2);            // æ—¶é—´å’Œæ—¥æœŸæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Desk.SetImageIndex(3);                // æ˜¾ç¤ºæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Access.SetImageIndex(4);              // è¾…åŠ©é€‰é¡¹æŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Mouse.SetImageIndex(5);               // é¼ æ ‡æŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Keyboard.SetImageIndex(6);            // é”®ç›˜æŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Intl.SetImageIndex(7);                // åŒºåŸŸæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Appwiz.SetImageIndex(8);              // æ·»åŠ /åˆ é™¤ç¨‹åºæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Hdwwiz.SetImageIndex(9);              // æ·»åŠ ç¡¬ä»¶æŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Sysdm.SetImageIndex(10);              // ç³»ç»ŸæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+    m_Computer.SetImageIndex(11);           // è®¡ç®—æœºç®¡ç†æŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
 
     return TRUE;
 }
 
-// InternetÑ¡Ïî°´Å¥
+// Interneté€‰é¡¹æŒ‰é’®
 
 void CContralDlg::OnButinternet()
 {
-    // ´ò¿ª IE µÄÉèÖÃ´°¿Ú
+    // æ‰“å¼€ IE çš„è®¾ç½®çª—å£
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL inetcpl.cpl", NULL, SW_SHOW);
 }
-// ÉùÒô°´Å¥
+// å£°éŸ³æŒ‰é’®
 void CContralDlg::OnButmmsys()
 {
-    // ´ò¿ª ÉùÒôµÄÉèÖÃ´°¿Ú
+    // æ‰“å¼€ å£°éŸ³çš„è®¾ç½®çª—å£
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL mmsys.cpl @1", NULL, SW_SHOW);
 }
-// Ê±¼äºÍÈÕÆÚ°´Å¥
+// æ—¶é—´å’Œæ—¥æœŸæŒ‰é’®
 void CContralDlg::OnButtimedate()
 {
-    // Æô¶¯ÈÕÆÚºÍÊ±¼äÉèÖÃ
+    // å¯åŠ¨æ—¥æœŸå’Œæ—¶é—´è®¾ç½®
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL timedate.cpl", NULL, SW_SHOW);
 }
-// ÏÔÊ¾°´Å¥
+// æ˜¾ç¤ºæŒ‰é’®
 void CContralDlg::OnButdesk()
 {
-    // Æô¶¯ÏÔÊ¾ÉèÖÃÃæ°å
+    // å¯åŠ¨æ˜¾ç¤ºè®¾ç½®é¢æ¿
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL desk.cpl", NULL, SW_SHOW);
 }
-// ¸¨ÖúÑ¡Ïî°´Å¥
+// è¾…åŠ©é€‰é¡¹æŒ‰é’®
 void CContralDlg::OnButaccess()
 {
-    // Æô¶¯¸¨ÖúÑ¡Ïî
+    // å¯åŠ¨è¾…åŠ©é€‰é¡¹
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL access.cpl", NULL, SW_SHOW);
 }
-// Êó±ê°´Å¥
+// é¼ æ ‡æŒ‰é’®
 void CContralDlg::OnButmouse()
 {
-    // ´ò¿ªÊó±êÉèÖÃ
+    // æ‰“å¼€é¼ æ ‡è®¾ç½®
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL main.cpl @0", NULL, SW_SHOW);
 }
-// ¼üÅÌ°´Å¥
+// é”®ç›˜æŒ‰é’®
 void CContralDlg::OnButkeyboard()
 {
-    // Æô¶¯¼üÅÌÉèÖÃ
+    // å¯åŠ¨é”®ç›˜è®¾ç½®
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL main.cpl @1", NULL, SW_SHOW);
 }
-// ÇøÓò°´Å¥
+// åŒºåŸŸæŒ‰é’®
 void CContralDlg::OnButintl()
 {
-    // ´ò¿ªÇøÓòÉèÖÃ
+    // æ‰“å¼€åŒºåŸŸè®¾ç½®
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL intl.cpl", NULL, SW_SHOW);
 }
-// Ìí¼Ó/É¾³ý³ÌÐò°´Å¥
+// æ·»åŠ /åˆ é™¤ç¨‹åºæŒ‰é’®
 void CContralDlg::OnButappwiz()
 {
-    // Æô¶¯Ìí¼ÓÈí¼þÉèÖÃ
+    // å¯åŠ¨æ·»åŠ è½¯ä»¶è®¾ç½®
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL appwiz.cpl", NULL, SW_SHOW);
 }
-// Ìí¼ÓÓ²¼þ°´Å¥
+// æ·»åŠ ç¡¬ä»¶æŒ‰é’®
 void CContralDlg::OnButhdwwiz()
 {
-    // Æô¶¯Ìí¼ÓÓ²¼þÉèÖÃ
+    // å¯åŠ¨æ·»åŠ ç¡¬ä»¶è®¾ç½®
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL hdwwiz.cpl", NULL, SW_SHOW);
 }
-// ÏµÍ³°´Å¥
+// ç³»ç»ŸæŒ‰é’®
 void CContralDlg::OnButsysdm()
 {
-    // ´ò¿ªÏµÍ³ÉèÖÃ
+    // æ‰“å¼€ç³»ç»Ÿè®¾ç½®
     ::ShellExecute(NULL, "OPEN", "rundll32.exe",
                    "shell32.dll Control_RunDLL sysdm.cpl", NULL, SW_SHOW);
 }
-// ¼ÆËã»ú¹ÜÀí°´Å¥
+// è®¡ç®—æœºç®¡ç†æŒ‰é’®
 void CContralDlg::OnButmodem()
 {
-    // Æô¶¯¼ÆËã»ú¹ÜÀíÉèÖÃ
+    // å¯åŠ¨è®¡ç®—æœºç®¡ç†è®¾ç½®
     ::ShellExecute(NULL, "OPEN", "compmgmt.msc",
                    "shell32.dll Control_RunDLL compmgmt.cpl", NULL, SW_SHOW);
 }
@@ -175,13 +175,13 @@ HBRUSH CContralDlg::OnCtlColor(CDC *pDC, CWnd *pWnd, UINT nCtlColor)
     CBitmap m_BKGround;
     m_BKGround.LoadBitmap(IDB_BITBLANK);
     if(nCtlColor == CTLCOLOR_DLG) {
-        // ¶¨ÒåÒ»¸öÎ»Í¼»­Ë¢
+        // å®šä¹‰ä¸€ä¸ªä½å›¾ç”»åˆ·
         CBrush m_Brush(&m_BKGround);
         CRect rect;
         GetClientRect(rect);
-        // Ñ¡ÖÐ»­Ë¢
+        // é€‰ä¸­ç”»åˆ·
         pDC->SelectObject(&m_Brush);
-        // Ìî³ä¿Í»§ÇøÓò
+        // å¡«å……å®¢æˆ·åŒºåŸŸ
         pDC->FillRect(rect, &m_Brush);
         return m_Brush;
     }
