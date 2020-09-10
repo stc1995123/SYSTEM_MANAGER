@@ -13,7 +13,7 @@ static char THIS_FILE[] = __FILE__;
 
 /////////////////////////////////////////////////////////////////////////////
 // CContralDlg dialog
-
+///// CCCCCDLG ;
 
 CContralDlg::CContralDlg(CWnd *pParent /*=NULL*/)
     : CDialog(CContralDlg::IDD, pParent)
